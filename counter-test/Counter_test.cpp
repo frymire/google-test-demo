@@ -12,7 +12,12 @@
 #include "pch.h"
 #include "Counter.h"
 
-TEST(Counter_Test, TestFromADifferentFile) {
+TEST(Counter_Test, ShouldReturn5AfterInstantiation) {
+  Counter c = Counter();
+  EXPECT_EQ(5, c.get_count());
+}
+
+TEST(Counter_Test, ShouldPassABunchOfRandomTests) {
   Counter c = Counter();
   EXPECT_NE(4, c.get_count());
   EXPECT_FALSE(0 == 1);
@@ -23,3 +28,10 @@ TEST(Counter_Test, TestFromADifferentFile) {
   EXPECT_STRNE("Hi", "HI");
   EXPECT_STRCASEEQ("HI", "hi");
 }
+
+// In Visual Studio, you can skip the following code by setting...
+//   Project Properties -> Referenced Packages -> GoogleTest -> Use Google Test's main function -> Yes
+//int main(int argc, char **argv) {
+//  ::testing::InitGoogleTest(&argc, argv);
+//  return RUN_ALL_TESTS();
+//}
