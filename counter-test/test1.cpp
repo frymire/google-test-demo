@@ -1,6 +1,6 @@
 
 /*
-   A demonstration using googletest to test code in another Visual Studio project.
+   A demonstration using Google Test to test code in another Visual Studio project.
 
    Note: After creating the test project, add the target project as a reference. Even after doing that,
    however, you have to explicitly add obj and lib files to the build path if the target project doesn't
@@ -12,13 +12,12 @@
 #include "pch.h"
 #include "Counter.h"
 
-TEST(CounterTest, ShouldReturn5AfterInstantiation) {
+TEST(Counter_Test, ShouldReturn5AfterInstantiation) {
   Counter c = Counter();
-  EXPECT_EQ(5, c.get_n());
+  EXPECT_EQ(5, c.get_count());
 }
 
-TEST(CounterTest, EasyTest) {
-  cout << "Hi." << endl;
+TEST(Counter_Test, EasyTest) {
   EXPECT_TRUE(2 == 1);
 }
 
