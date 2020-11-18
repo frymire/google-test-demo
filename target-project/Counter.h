@@ -9,6 +9,6 @@ private:
 
 public:
 	Counter();
-	int get_count();
-	void increment();
+	int GetCount();
+	void Increment();
 };
