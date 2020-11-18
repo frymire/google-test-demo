@@ -12,26 +12,23 @@
 #include "pch.h"
 #include "Counter.h"
 
-TEST(Counter_Test, ShouldReturn5AfterInstantiation) {
+// Use class naming convention for test suite names; don't use underscores (e.g. Counter_Test).
+TEST(CounterTest, ShouldReturn5AfterInstantiation) {  
   Counter c = Counter();
-  EXPECT_EQ(5, c.get_count());
+  EXPECT_EQ(5, c.GetCount());
 }
 
-TEST(Counter_Test, ShouldPassABunchOfRandomTests) {
+TEST(CounterTest, ShouldFailWithAMessage) {
   Counter c = Counter();
-  EXPECT_NE(4, c.get_count());
+  EXPECT_EQ(4, c.GetCount()) << "Expected 4, but found " << c.GetCount();
+}
+
+TEST(CounterTest, ShouldPassABunchOfRandomTests) {
+  Counter c = Counter();
+  EXPECT_NE(4, c.GetCount());
   EXPECT_FALSE(0 == 1);
   EXPECT_LT(1, 2);
   EXPECT_GT(2, 1);
   EXPECT_GE(2, 2);
-  EXPECT_STREQ("Hi", "Hi");
-  EXPECT_STRNE("Hi", "HI");
-  EXPECT_STRCASEEQ("HI", "hi");
+  // NOTE: If you want a failed assertion to be fatal, use ASSERT_* rather than EXPECT_*.
 }
-
-// In Visual Studio, you can skip the following code by setting...
-//   Project Properties -> Referenced Packages -> GoogleTest -> Use Google Test's main function -> Yes
-//int main(int argc, char **argv) {
-//  ::testing::InitGoogleTest(&argc, argv);
-//  return RUN_ALL_TESTS();
-//}
