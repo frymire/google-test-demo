@@ -20,7 +20,7 @@ TEST(CounterTest, ShouldReturn5AfterInstantiation) {
 
 TEST(CounterTest, ShouldFailWithAMessage) {
   Counter c = Counter();
-  EXPECT_EQ(4, c.GetCount()) << "Expected 4, but found " << c.GetCount();
+  EXPECT_EQ(4, c.GetCount()) << "Hey, I expected 4, but found " << c.GetCount();
 }
 
 TEST(CounterTest, ShouldPassABunchOfRandomTests) {

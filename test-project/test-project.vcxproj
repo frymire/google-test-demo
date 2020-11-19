@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="counter_test.cpp" />
+    <ClCompile Include="disable_test.cpp" />
     <ClCompile Include="fixture_test.cpp" />
+    <ClCompile Include="format_test.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
