@@ -38,3 +38,13 @@ TEST(StringTest, StringsShouldBeNull) {
   const char* string3 = "";
   EXPECT_EQ(string3, nullptr); // fail, this is an empty string at a valid address
   }
+
+// TODO: Add a demo of gMock matchers here. It is pre-bundled in a later version of googletest.
+// See: https://github.com/google/googletest/blob/master/googletest/docs/advanced.md#asserting-using-gmock-matchers
+// and: https://github.com/google/googletest/blob/master/googletest/docs/advanced.md#more-string-assertions
+//#include "gmock/gmock.h" // not included in this version of googletest
+//TEST(StringTest, SubstringShouldMatchUsingGMock) {
+  //EXPECT_THAT("Hello world.", testing::StartsWith("Hello"));
+  //ASSERT_THAT(foo_string, testing::HasSubstr("needle"));
+  //EXPECT_THAT(bar_string, testing::MatchesRegex("\\w*\\d+"));
+//}
